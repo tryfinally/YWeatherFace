@@ -123,7 +123,7 @@ void pbl_main(void *params) {
     .tick_info = {
       .tick_handler = &handle_minute_tick,
       .tick_units = MINUTE_UNIT
-    }
+    },
     .messaging_info = {
       .buffer_sizes = {
         .inbound = 64,
