@@ -13,3 +13,7 @@ http://query.yahooapis.com/v1/public/yql?q=use%20'http%3A%2F%2Fdl.dropbox.com%2F
 
 Android App uses async connectivity and a custom location tracker to retrieve forecast
 and push to pebble
+
+
+
+android app at Download https://cloudpebble.net/ide/project/13982/resource/85784/get
