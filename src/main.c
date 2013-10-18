@@ -5,7 +5,7 @@
 
 #define MY_UUID { 0x13, 0xE7, 0x57, 0x99, 0x5F, 0xB0, 0x49, 0x79, 0xA0, 0x7D, 0x73, 0xBE, 0x44, 0x7B, 0x93, 0x3F }
 PBL_APP_INFO(MY_UUID,
-             "YWeather", "TryFinally",
+             "Yahoo Weather", "TryFinally",
              1, 0, /* App version */
              DEFAULT_MENU_ICON,
              APP_INFO_WATCH_FACE);
@@ -41,7 +41,7 @@ void handle_init(AppContextRef ctx) {
   text_layer_set_text_color(&text_date_layer, GColorWhite);
   text_layer_set_background_color(&text_date_layer, GColorClear);
   layer_set_frame(&text_date_layer.layer, GRect(8, 68, 144-8, 168-68));
-  //text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));
+  text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));
   layer_add_child(&window.layer, &text_date_layer.layer);
 
 
@@ -49,7 +49,7 @@ void handle_init(AppContextRef ctx) {
   text_layer_set_text_color(&text_time_layer, GColorWhite);
   text_layer_set_background_color(&text_time_layer, GColorClear);
   layer_set_frame(&text_time_layer.layer, GRect(7, 92, 144-7, 168-92));
-  //text_layer_set_font(&text_time_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_BOLD_SUBSET_49)));
+  text_layer_set_font(&text_time_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_BOLD_SUBSET_49)));
   layer_add_child(&window.layer, &text_time_layer.layer);
 
 

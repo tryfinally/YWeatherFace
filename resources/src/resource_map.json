@@ -1,9 +1,36 @@
 {
     "media": [
         {
-            "defName": "DUMMY",
-            "type": "raw",
-            "file": "resource_map.json"
+            "defName": "IMAGE_CLOUD",
+            "type": "png",
+            "file": "images/cloud.png"
+        },
+        {
+            "defName": "IMAGE_RAIN",
+            "type": "png",
+            "file": "images/rain.png"
+        },
+        {
+            "defName": "IMAGE_SNOW",
+            "type": "png",
+            "file": "images/snow.png"
+        },
+        {
+            "defName": "IMAGE_SUN",
+            "type": "png",
+            "file": "images/sun.png"
+        },
+        {
+            "characterRegex": "[:0-9A-Za-z]",
+            "defName": "FONT_ROBOTO_CONDENSED_21",
+            "type": "font",
+            "file": "fonts/Roboto-Condensed.ttf"
+        },
+        {
+            "characterRegex": "[:0-9]",
+            "defName": "FONT_ROBOTO_BOLD_SUBSET_49",
+            "type": "font",
+            "file": "fonts/Roboto-Bold.ttf"
         }
     ],
     "friendlyVersion": "VERSION",
