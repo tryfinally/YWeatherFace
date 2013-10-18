@@ -77,33 +77,42 @@ void handle_init(AppContextRef ctx) {
   layer_init(&app.line_layer, app.window.layer.frame);
   app.line_layer.update_proc = &line_layer_update_callback;
   layer_add_child(&app.window.layer, &app.line_layer);
-
-
+  
+  PblTm pt;
+  get_time(&pt);
+  void _handle_minute_tick(PblTm *tick_time);
+  void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t);
+  _handle_minute_tick(&pt);
   // TODO: Update display here to avoid blank display on launch?
 }
 
 
+
+void _handle_minute_tick(PblTm *tick_time);
 void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
+	_handle_minute_tick(t->tick_time);
+}
+void _handle_minute_tick(PblTm *tick_time) {
 
   // Need to be static because they're used by the system later.
   static char time_text[] = "00 00";
-  static char date_text[] = "Xxxxxxxxx 00";
+  static char date_text[] = "Xxxxxxxxx  : 00";
 
   char *time_format;
 
 
   // TODO: Only update the date when it's changed.
-  string_format_time(date_text, sizeof(date_text), "%B-%e", t->tick_time);
+  string_format_time(date_text, sizeof(date_text), "%B  : %d", tick_time);
   text_layer_set_text(&app.text_date_layer, date_text);
 
 
   if (clock_is_24h_style()) {
     time_format = "%R";
   } else {
-    time_format = "%I %M";
+    time_format = "%I:%M";
   }
 
-  string_format_time(time_text, sizeof(time_text), time_format, t->tick_time);
+  string_format_time(time_text, sizeof(time_text), time_format, tick_time);
 
   // Kludge to handle lack of non-padded hour format string
   // for twelve hour clock.
