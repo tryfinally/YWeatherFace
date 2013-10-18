@@ -100,7 +100,7 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
   if (clock_is_24h_style()) {
     time_format = "%R";
   } else {
-    time_format = "%I:%M";
+    time_format = "%I %M";
   }
 
   string_format_time(time_text, sizeof(time_text), time_format, t->tick_time);
