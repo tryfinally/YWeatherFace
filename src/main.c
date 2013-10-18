@@ -2,7 +2,7 @@
 #include "pebble_app.h"
 #include "pebble_fonts.h"
 
-
+//for android     "13E75799-5FB0-4979-A07D-73BE447B933F"
 #define MY_UUID { 0x13, 0xE7, 0x57, 0x99, 0x5F, 0xB0, 0x49, 0x79, 0xA0, 0x7D, 0x73, 0xBE, 0x44, 0x7B, 0x93, 0x3F }
 PBL_APP_INFO(MY_UUID,
              "Yahoo Weather", "TryFinally",
@@ -154,7 +154,7 @@ void _handle_minute_tick(PblTm *tick_time) {
 
 
   // TODO: Only update the date when it's changed.
-  string_format_time(date_text, sizeof(date_text), "%b:%d", tick_time);
+  string_format_time(date_text, sizeof(date_text), "%B:%d", tick_time);
   text_layer_set_text(&app.text_date_layer, date_text);
 
 
@@ -173,10 +173,10 @@ void _handle_minute_tick(PblTm *tick_time) {
   }
   text_layer_set_text(&app.text_time_layer, time_text);
 	
-  text_layer_set_text(&app.temperature_layer, temp_text);
+  //text_layer_set_text(&app.temperature_layer, temp_text);
 
-  load_bitmap(WEATHER_ICONS[2]);
-  bitmap_layer_set_bitmap(&app.icon_layer, &app.icon_bitmap.bmp);
+  //load_bitmap(WEATHER_ICONS[2]);
+  //bitmap_layer_set_bitmap(&app.icon_layer, &app.icon_bitmap.bmp);
 }
 
 static void handle_deinit(AppContextRef c) {
