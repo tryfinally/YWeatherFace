@@ -93,7 +93,7 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
 
 
   // TODO: Only update the date when it's changed.
-  string_format_time(date_text, sizeof(date_text), "%B %e", t->tick_time);
+  string_format_time(date_text, sizeof(date_text), "%B-%e", t->tick_time);
   text_layer_set_text(&app.text_date_layer, date_text);
 
 
