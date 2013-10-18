@@ -17,3 +17,6 @@ and push to pebble
 
 
 android app at Download https://cloudpebble.net/ide/project/13982/resource/85784/get
+apk at : https://cloudpebble.net/ide/project/13982/resource/85785/get
+
+
